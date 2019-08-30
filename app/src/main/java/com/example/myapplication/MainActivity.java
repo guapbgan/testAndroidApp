@@ -22,6 +22,12 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         findViews();
+//        bHelp.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//
+//            }
+//        });
     }
 
     private void findViews() {
@@ -47,6 +53,11 @@ public class MainActivity extends AppCompatActivity {
 
     public void startScanner(View v){
         Intent intent = new Intent(this, ScannerActivity.class);
+        startActivity(intent);
+    }
+
+    public void startWebService(View v){
+        Intent intent = new Intent(this, WebServiceTest.class);
         startActivity(intent);
     }
 }
